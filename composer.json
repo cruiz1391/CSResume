@@ -1,0 +1,16 @@
+{
+  "name": "Carlos/ComputerScienceWEB",
+  "description": "Personal Computer Science Resume",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Carlos Ruiz",
+      "email": "cruiz1391@gmail.com"
+    }
+  ],
+  "require": {
+    "components/modernizr": "2.8.3",
+    "dimsemenov/magnific-popup": "1.0.1"
+  }
+}
