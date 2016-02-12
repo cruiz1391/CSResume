@@ -1,5 +1,6 @@
 ﻿<?php
-$siteOwnersEmail = 'contact@cruizm.com';
+$siteOwnersEmail = 'cruiz1391@gmail.com';
+$server_email = 'contact@cruizm.com';
 
 if($_POST) {
    $name = trim(stripslashes($_POST['contactName']));
@@ -36,9 +37,9 @@ if($_POST) {
    $from =  $name . " <" . $email . ">";
 
    // Email Headers
-	$headers = "From: " . $siteOwnersEmail . "\r\n";
-	$headers .= "Reply-To: ". $siteOwnersEmail . "\r\n";
-	$headers .= "Return-Path: ". $siteOwnersEmail . "\r\n";
+	$headers = "From: " . $server_email . "\r\n";
+	$headers .= "Reply-To: ". $from . "\r\n";
+	$headers .= "Return-Path: ". $from . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	$headers .= "X-Priority: 3\r\n";
