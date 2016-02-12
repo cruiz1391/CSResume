@@ -1,5 +1,5 @@
 ﻿<?php
-$siteOwnersEmail = 'cruiz1391@gmail.com';
+$siteOwnersEmail = 'contact@cruizm.com';
 
 if($_POST) {
    $name = trim(stripslashes($_POST['contactName']));
@@ -36,9 +36,9 @@ if($_POST) {
    $from =  $name . " <" . $email . ">";
 
    // Email Headers
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "Return-Path: ". $from . "\r\n";
+	$headers = "From: " . $siteOwnersEmail . "\r\n";
+	$headers .= "Reply-To: ". $siteOwnersEmail . "\r\n";
+	$headers .= "Return-Path: ". $siteOwnersEmail . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	$headers .= "X-Priority: 3\r\n";
@@ -47,7 +47,7 @@ if($_POST) {
 
    if (!$error) {
 
-      ini_set("cruiz1391@gmail.com", $siteOwnersEmail); // for windows server
+      ini_set("contact@cruizm.com", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { echo "OK"; }
