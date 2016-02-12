@@ -30,7 +30,7 @@ if($_POST) {
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
-   $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
+   $message .= "<br /> ----- <br /> email from: www.cruizm.com <br />";
 
    // Set From: header
    $from =  $name . " <" . $email . ">";
@@ -38,8 +38,9 @@ if($_POST) {
    // Email Headers
 	$headers = "From: " . $from . "\r\n";
 	$headers .= "Reply-To: ". $email . "\r\n";
+	$headers .= "Return-Path: ". $from . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
 
 
    if (!$error) {
